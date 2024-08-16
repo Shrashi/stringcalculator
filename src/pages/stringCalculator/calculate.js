@@ -9,7 +9,10 @@ function add(numbers) {
     numbers = arr[1];
   }
   const numArray = numbers.split(delimiters).map(Number);
-
+  const negativeNums = numArray.filter((n) => n < 0);
+  if (negativeNums.length) {
+    throw new Error(`Negative numbers not allowed: ${negativeNums.join(", ")}`);
+  }
   return numArray.reduce((sum, num) => sum + num, 0);
 }
 
