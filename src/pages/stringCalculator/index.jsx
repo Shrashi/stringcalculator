@@ -29,15 +29,17 @@ const StringCalculator = () => {
         </div>
         <Button label="Click Me" onClick={handleClick} />
       </Container>
-      <Container
-        style={{
-          height: "20vh",
-          justifyContent: "center",
-        }}
-      >
-        <div>RESULT</div>
-        <div>{results}</div>
-      </Container>
+      {results && (
+        <Container
+          style={{
+            height: "20vh",
+            justifyContent: "center",
+          }}
+        >
+          <div>RESULT</div>
+          <div>{results}</div>
+        </Container>
+      )}
     </div>
   );
 };
