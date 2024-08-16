@@ -7,7 +7,7 @@ import add from "./calculate";
 
 const StringCalculator = () => {
   const [value, setValue] = useState("");
-  const [results, setResults] = useState(null);
+  const [results, setResults] = useState("");
 
   const handleClick = () => {
     let res = add(value);
@@ -25,11 +25,12 @@ const StringCalculator = () => {
             locked={false}
             value={value}
             setValue={setValue}
+            label="Compute your string"
           />
         </div>
         <Button label="Click Me" onClick={handleClick} />
       </Container>
-      {results && (
+      {String(results) && (
         <Container
           style={{
             height: "20vh",
