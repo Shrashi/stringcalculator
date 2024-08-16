@@ -35,7 +35,7 @@ const StringCalculator = () => {
           justifyContent: "center",
         }}
       >
-        <div>RESULTS</div>
+        <div>RESULT</div>
         <div>{results}</div>
       </Container>
     </div>

@@ -1,6 +1,7 @@
 .textWrapper {
   display: "flex";
   justify-content: "flex-start";
+  margin-top: 20px;
   width: "100%";
 }
 
